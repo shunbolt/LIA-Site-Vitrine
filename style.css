@@ -73,7 +73,7 @@ nav.navbar, img.logo, a.nav-link, button.btn-top {
   color: #FFF8F0;
 }
 
-.navbar-light .navbar-nav .nav-link.active {
+.navbar-light .navbar-nav .nav-link:active {
   color: #432E36;
 }
 
@@ -215,12 +215,11 @@ button.show {
 /* AJUSTEMENT MOBILE */
 @media (max-width: 991.5px) {
   body {
-    font-family: 'Nunito Sans';
     margin-top: 10px;
   }
 
   img.avatar {
-    width: 75px;
+    width: 100px;
     border-width: 2px;
   }
 
@@ -240,10 +239,6 @@ button.show {
 
   .navbar-menu {
     height: 52px;
-  }
-
-  .navbar-menu .navbar-light .navbar-nav .nav-link.active {
-    color: #FFF8F0;
   }
 
   nav.nav-expended {
