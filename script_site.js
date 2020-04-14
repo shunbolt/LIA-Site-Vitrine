@@ -6,6 +6,8 @@ new ClipboardJS('.btn')
 
 // Navbar
 $(window).on('scroll', function() {
+
+  
   if ($(window).scrollTop() > 60) {
     $('.navbar').removeClass('nav-expended').addClass('nav-collapsed')
   } else {

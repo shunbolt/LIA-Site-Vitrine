@@ -13,13 +13,15 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <!-- Custom styles -->
-  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename = 'styles/style_site.css')}} ">
   <!-- Icon -->
-  <link rel="icon" type="image/icon" href="images/icons/iconLIA.ico" />
+  <link rel="icon" type="image/icon" href=" {{ url_for('static', filename = 'images/icons/iconLIA.ico')}} ">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Abel|Nunito+Sans|Sen&display=swap" rel="stylesheet">
   <!-- Animate On Scroll Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Fontawesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -29,38 +31,38 @@
   <div class="bg bg3"></div>
 
   <button type="button" class="btn btn-top hide" title="Retourner en haut">
-    <img src="images/icons/arrow-up.svg" alt="Retourner en haut">
+    <i class="fas fa-arrow-up" alt="Retourner en haut"></i>
   </button>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light nav-expended fixed-top linear-gradient">
     <div class="div-nav offset-2 col-8 d-flex bd-highlight">
       <div class="mr-auto bd-highlight">
-        <a class="top logo" href="#">
-          <img src="images/logos/logoLIA_vg_C.png" class="logo d-inline-block align-center" alt="Logo LIA"></a>
+        <a class="top logo" href="/">
+          <img src="{{ url_for('static', filename = 'images/logos/logoLIA_vg_C.png')}}" class="logo d-inline-block align-center" alt="Logo LIA"></a>
       </div>
       <div class="navbar-menu bd-highlight align-self-center">
 
 
-          <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#projet">Projet</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#equipe">Equipe</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#partenaires">Partenaires</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#integration">Intégration</a>
-              </li>
-            </ul>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#projet">Projet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#equipe">Equipe</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#partenaires">Partenaires</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#integration">Intégration</a>
+            </li>
+          </ul>
         </div>
 
         <button class="btn navbar-toggler align-self-center" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-          <span id="rotatable" class="navbar-toggler-icon"></span>
+          <i id="rotatable" class="fas fa-bars"></i>
         </button>
       </div>
     </div>
@@ -73,14 +75,14 @@
         <div class="col-6 m-auto">
           <blockquote class="blockquote">
             <p class="mb-0">Le courage n'est pas l'absence de peur, mais la capacité de vaincre ce qui fait peur.</p>
-            <footer class="blockquote-footer">Nelson Mandela dans <cite title="Source Title">Un long chemin vers la liberté</cite></footer>
+            <footer class="blockquote-footer">Nelson Mandela, <cite title="Source Title">Un long chemin vers la liberté</cite></footer>
           </blockquote>
         </div>
       </div>
 
       <!-- Video -->
       <div class="row justify-content-center">
-        <iframe data-aos="fade-up" width="560" height="315" src="https://www.youtube.com/embed/WESOblQ_3bw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Rj2VHP-yfoI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
 
@@ -93,20 +95,20 @@
         <div class="col-10 m-auto">
           <p class="corps" data-aos="fade-left" data-aos-duration="1500">
             <b>LIA c’est quoi ?</b><br>
-            LIA est un projet étudiant visant à concevoir un chatbot pour les élèves du secondaire, victimes de harcèlement scolaire.
-            LIA se définit comme un nouveau moyen de communication et d’échange entre les élèves et les autorités compétentes.</p>
+            LIA c'est avant tout un projet étudiant, un chatbot conçu pour les élèves du secondaire, victimes ou témoins de harcèlement scolaire.
+            LIA se définit comme un outil supplémentaire de communication, d'échange, de transmission et signalement de problèmes entre les élèves et les
+            autorités compétentes.</p>
           <p class="corps" data-aos="fade-right" data-aos-duration="1500">
             <b>Pourquoi avoir fait ce projet ?</b><br>
-            La grande majorité des adolescents se servent et utilisent de plus en plus d’applications internet ou mobiles pour communiquer (réseaux sociaux
-            – SMS - Chat). D’un autre côté, les enfants n’ont pas toujours l’aisance de parler de leurs problèmes face à un adulte souvent par peur de représailles
-            ou de jugement de leur part.<br>
-            LIA est une réponse combinant ces deux aspects : c’est à la fois une méthode de chat similaire à ce qu’utilise déjà l’enfant et un engagement
-            avec l’enfant sans soupçon ou préjugé humain qui pourrait troubler la victime.</p>
+            La grande majorité des adolescents se servent et utilisent de plus en plus d’applications internet ou mobiles pour communiquer (Réseaux sociaux – SMS – Chat).
+            De plus, un adolescent n’a pas toujours l’aisance pour parler de ses problèmes face à un adulte souvent par peur de représailles ou de jugement de leur part.<br>
+            De ces problématiques, est nés LIA, une réponse combinant ces deux aspects : à la fois une méthode de chat similaire à ce qu’utilise déjà l'adolescent et
+            un engagement auprès de lui sans soupçon ou préjugé humain qui pourrait le troubler.</p>
           <p class="corps" data-aos="fade-left" data-aos-duration="1500">
             <b>Comment cela fonctionne ?</b><br>
-            &emsp;1. Le chatbot échange avec l’adolescent autour des problèmes qu’il rencontre à l’école ;<br>
+            &emsp;1. Le chatbot échange avec l’adolescent autour des problèmes qu’il rencontre ou observe à l’école ;<br>
             &emsp;2. Le bot génère une fiche et une alerte à travers les informations collectées durant la discussion ;<br>
-            &emsp;3. La fiche est transmise aux autorités pour qu’ils puissent suivre le problème.</p>
+            &emsp;3. La fiche est transmise aux autorités compétentes pour qu’ils puissent suivre le problème.</p>
         </div>
       </div>
     </div>
@@ -118,20 +120,21 @@
       </div>
       <div class="row">
         <div class="col-10 m-auto">
-          <img data-aos="flip-right" data-aos-duration="2000" src="images/avatars/avatar_Theo.png" width="150px" class="avatar" title="Theo Gaullier" />
-          <img data-aos="flip-right" data-aos-duration="2000" data-aos-delay="300" src="images/avatars/avatar_Maximilien.png" width="150px" class="avatar" title="Maximilien Dalban" />
-          <img data-aos="flip-left" data-aos-duration="2000" data-aos-delay="600" src="images/avatars/avatar_Antoine.png" width="150px" class="avatar" title="Antoine Auffray" />
-          <img data-aos="flip-right" data-aos-duration="2000" data-aos-delay="150" src="images/avatars/avatar_Paul.png" width="150px" class="avatar" title="Paul Basnier" />
-          <img data-aos="flip-right" data-aos-duration="2000" data-aos-delay="900" src="images/avatars/avatar_Yoann.png" width="150px" class="avatar" title="Yoann Torrado" />
-          <img data-aos="flip-left" data-aos-duration="2000" data-aos-delay="450" src="images/avatars/avatar_Raphael.png" width="150px" class="avatar" title="Raphael Tran" />
-          <img data-aos="flip-right" data-aos-duration="2000" src="images/avatars/avatar_Francois.png" width="150px" class="avatar" title="François Hervé" />
-          <img data-aos="flip-left" data-aos-duration="2000" data-aos-delay="600" src="images/avatars/avatar_Brenden.png" width="150px" class="avatar" title="Brenden Balane" />
+          <img data-aos="flip-right" data-aos-duration="2000" src="{{ url_for('static', filename = 'images/avatars/avatar_Theo.png')}}" width="150px" class="avatar" title="Theo Gaullier" />
+          <img data-aos="flip-right" data-aos-duration="2000" data-aos-delay="300" src="{{ url_for('static', filename = 'images/avatars/avatar_Maximilien.png')}}" width="150px" class="avatar" title="Maximilien Dalban" />
+          <img data-aos="flip-left" data-aos-duration="2000" data-aos-delay="600" src="{{ url_for('static', filename = 'images/avatars/avatar_Antoine.png')}}" width="150px" class="avatar" title="Antoine Auffray" />
+          <img data-aos="flip-right" data-aos-duration="2000" data-aos-delay="150" src="{{ url_for('static', filename = 'images/avatars/avatar_Paul.png')}}" width="150px" class="avatar" title="Paul Basnier" />
+          <img data-aos="flip-right" data-aos-duration="2000" data-aos-delay="900" src="{{ url_for('static', filename = 'images/avatars/avatar_Yoann.png')}}" width="150px" class="avatar" title="Yoann Torrado" />
+          <img data-aos="flip-left" data-aos-duration="2000" data-aos-delay="450" src="{{ url_for('static', filename = 'images/avatars/avatar_Raphael.png')}}" width="150px" class="avatar" title="Raphael Tran" />
+          <img data-aos="flip-right" data-aos-duration="2000" src="{{ url_for('static', filename = 'images/avatars/avatar_Francois.png')}}" width="150px" class="avatar" title="François Hervé" />
+          <img data-aos="flip-left" data-aos-duration="2000" data-aos-delay="600" src="{{ url_for('static', filename = 'images/avatars/avatar_Brenden.png')}}" width="150px" class="avatar" title="Brenden Balane" />
         </div>
       </div>
       <div class="row">
         <div class="col-10 m-auto">
           <p class="corps" data-aos="fade-up" data-aos-delay="150">
-            Nous sommes une équipe de huit étudiants ingénieurs au sein d’EFREI Paris.</p>
+            LIA est une équipe de huit étudiants ingénieurs au sein d’EFREI Paris. Notre équipe est composée d’étudiants en data science, en software engineering et
+            en cloud engineering qui se sont réunis dans le cadre de nos études pour créer une solution nouvelle et durable.</p>
         </div>
       </div>
     </div>
@@ -144,15 +147,18 @@
       <div class="row">
         <div class="col-10 m-auto">
           <a>
-            <img src="images/logos/ac-paris.png" class="m-3" data-aos="fade-up" width="150px" title="Rectorat de Paris" /></a>
+            <img src="{{ url_for('static', filename = 'images/logos/ac-paris.png')}}" class="m-3" data-aos="fade-up" width="150px" title="Rectorat de Paris" /></a>
           <a href="https://www.asso-hugo.fr/">
-            <img src="images/logos/hugo.png" class="m-3" data-aos="fade-up" data-aos-delay="300" width="150px" title="HUGO!" /></a>
+            <img src="{{ url_for('static', filename = 'images/logos/hugo.png')}}" class="m-3" data-aos="fade-up" data-aos-delay="300" width="150px" title="HUGO!" /></a>
           <a href="https://www.gandi.net/fr">
-            <img src="images/logos/gandi.png" class="m-3" data-aos="fade-up" data-aos-delay="150" width="150px" title="Gandi" /></a>
+            <img src="{{ url_for('static', filename = 'images/logos/gandi.png')}}" class="m-3" data-aos="fade-up" data-aos-delay="150" width="150px" title="Gandi" /></a>
           <a>
-            <img src="images/logos/humanIT.png" class="m-3" data-aos="fade-up" data-aos-delay="450" width="150px" title="human'IT" /></a>
+            <img src="{{ url_for('static', filename = 'images/logos/humanIT.png')}}" class="m-3" data-aos="fade-up" data-aos-delay="450" width="150px" title="human'IT" /></a>
           <a href="https://www.efrei.fr/">
-            <img src="images/logos/efrei.png" class="m-3" data-aos="fade-up" data-aos-delay="600" width="150px" title="EFREI Paris" /></a>
+            <img src="{{ url_for('static', filename = 'images/logos/efrei.png')}}" class="m-3" data-aos="fade-up" data-aos-delay="600" width="150px" title="EFREI Paris" /></a>
+          <p class="corps" data-aos="fade-up" data-aos-delay="850">
+            Nous remercions nos partenaires de nous aider dans ce projet, gandi.net et human’it pour l’apport matériel ainsi que
+            l’association Hugo et l’éducation nationale pour l’aide sur le plan social.</p>
         </div>
       </div>
     </div>
@@ -165,7 +171,8 @@
       <div class="row">
         <div class="col-10 m-auto">
           <p class="corps" data-aos="fade-up">
-            Pour intégrer notre chatbot à votre site rien de plus simple : ajoutez l'iframe ci-dessous dans votre code.</p>
+            Pour intégrer notre chatbot à votre site rien de plus simple :
+            ajoutez l'iframe ci-dessous dans votre code. Pour cela il suffit d’intégrer la balise &lt;iframe&gt; dans votre document HTML.</p>
 
           <!-- Code pour copier iframe -->
           <div class="col-8 m-auto input-group mb-3" data-aos="fade-up">
@@ -177,7 +184,7 @@
             <div class="input-group-append">
               <span class="input-group-text p-0 px-2">
                 <button class="btn btn-copy p-0" data-clipboard-target="#copy" title="Copie le lien">
-                  <img src="images/icons/documents.svg" alt="Copie le lien">
+                  <i class="far fa-copy" alt="Copie le lien"></i>
                 </button>
               </span>
             </div>
@@ -187,16 +194,30 @@
       </div>
     </div>
 
+    <!-- Remerciements -->
+    <div class="envlp" id="integration">
+      <div class="row justify-content-center">
+        <h2>Nos remerciments</h2>
+      </div>
+      <div class="row">
+        <div class="col-10 m-auto">
+          <p class="corps" data-aos="fade-up">
+            Nous tenions à remercier Mona Ginet pour le logo, Vinodha Balane pour avoir prêté sa voix dans la vidéo de présentation et enfin
+            Andreas Topp et Benoît Charroux pour leurs précieux conseils.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- Footer -->
   <div class="card-footer d-flex justify-content-center">
-    <a class="nav-link" href="about.html">
-      <p>@aboutUs</p>
+    <a class="nav-link" href="/mentions_legales">
+      <p>Mentions légales</p>
     </a>
-    <a href="index.html" class="mx-5">
-      <img src="images/logos/logoLIA_vg_NB.png" width="45px"></a>
-    <a class="nav-link" href="contact.html">
+    <a href="/" class="mx-5">
+      <img src="{{ url_for('static', filename = 'images/logos/logoLIA_vg_NB.png')}}" width="45px"></a>
+    <a class="nav-link" href="/contact">
       <p>Nous contacter</p>
     </a>
   </div>
@@ -205,7 +226,10 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- ClipboardJS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-  <script src="script.js"></script>
+  <!-- Fontawesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+  <!-- Mes fonctions -->
+  <script src= "{{ url_for('static', filename = 'script/script_site.js')}}" ></script>
 </body>
 
 </html>
